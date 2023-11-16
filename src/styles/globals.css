@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  border: white 1px solid;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: .1s ease-in;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+button:disabled {
+  color: grey;
+  border-color: grey;
+}
+
+button:disabled:hover {
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+}
+
+main {
+  border: white 1px solid;
+  border-radius: 5px;
+  height: 80vh;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.words {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.word {
+  text-transform: capitalize;
+  width: 19vw;
+  /* height: ; */
+  text-align: center;
+  border: 1px white solid;
+  cursor: move;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
+
+.buttons {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.loading  {
+  font-size: 20px;
+}
